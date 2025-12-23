@@ -27,10 +27,12 @@ function Calculator({ workouts, allowSound }) {
 
   function handleIncrement() {
     setDuration((duration) => Math.floor(duration) + 1);
+    playSound();
   }
 
   function handleDecrement() {
     setDuration((duration) => (duration > 1 ? Math.ceil(duration) - 1 : 0));
+    playSound();
   }
 
   return (
